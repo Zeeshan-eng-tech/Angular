@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router'; // this module is working for
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
