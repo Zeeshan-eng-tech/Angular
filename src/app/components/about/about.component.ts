@@ -9,7 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
+  constructor(){
+    this.abc();
+  }
    title: string = "about component";
    today: any = new Date ();
    price: any = 200;
+   abc (){
+    console.log('cartoon')
+   }
 }
