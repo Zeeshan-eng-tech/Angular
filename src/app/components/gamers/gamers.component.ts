@@ -28,5 +28,8 @@ constructor(){
         console.log(this.gamers); // ✅ Now this logs the correct data
       })
       .catch(error => console.error("Error fetching gamers:", error)); // Handle fetch errors
+    }
+    deleteGamer (id:number) {
+      alert(id);
   }
 }
