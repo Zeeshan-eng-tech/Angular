@@ -12,7 +12,7 @@
       <td>{{ gamer.city }}</td>
       <td>{{ gamer.whatsapp }}</td>
       <td>
-        <button class="btn btn-sm m-2 btn-danger"><i class="fa fa-trash"></i></button>
+        <button class="btn btn-sm m-2 btn-danger" (click)="deleteGamer(gamer.id)"><i class="fa fa-trash"></i></button>
         <button class="btn btn-sm btn-success"><i class="fa fa-edit"></i></button>
       </td>
     </tr>
