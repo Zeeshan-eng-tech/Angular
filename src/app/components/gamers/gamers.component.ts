@@ -29,17 +29,17 @@ constructor(){
       })
       .catch(error => console.error("Error fetching gamers:", error)); // Handle fetch errors
     }
-    deleteGamer (id:number) {
-    if (confirm("Hello Zeeshan are you sure? You Want To Delete it ?") == true){
-    let url = 'https://67c0f21cb9d02a9f224b4733.mockapi.io/game/gamers/${id}';
-      fetch(url,{
-        method:"DELETE"
-      })
-      .then(response => response.json())
-      .then(data =>console.log (data));
-       this.fetchGamers();
-       console.log('Hello Zeeshan OK working');
-      // alert(id);
+    deleteGamer(id: number) {
+      if (confirm("Hello Zeeshan, are you sure you want to delete this gamer?")) {
+        let url = `https://67c0f21cb9d02a9f224b4733.mockapi.io/game/gamers/${id}`;
+    
+        fetch(url, { method: "DELETE" })
+          .then(response => response.json())
+          .then(data => {
+            console.log("Deleted:", data);  // ✅ Check if deletion was successful
+            this.fetchGamers();             // ✅ Fetch updated list AFTER deletion completes
+          })
+          .catch(error => console.error("Error deleting gamer:", error));
+      }
     }
-    }
-}
+  }
