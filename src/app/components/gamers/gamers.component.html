@@ -7,7 +7,7 @@
       <th>Action</th>
     </tr>    
     <tr *ngFor="let gamer of gamers"> <!-- ✅ Corrected *ngFor -->
-      <td>{{ gamer.name }}</td> <!-- ✅ Use actual object properties -->
+      <td>{{ gamer.id}} {{ gamer.name }}</td> <!-- ✅ Use actual object properties -->
       <td>{{ gamer.email }}</td>
       <td>{{ gamer.city }}</td>
       <td>{{ gamer.whatsapp }}</td>

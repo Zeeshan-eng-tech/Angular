@@ -30,6 +30,16 @@ constructor(){
       .catch(error => console.error("Error fetching gamers:", error)); // Handle fetch errors
     }
     deleteGamer (id:number) {
-      alert(id);
-  }
+    if (confirm("Hello Zeeshan are you sure? You Want To Delete it ?") == true){
+    let url = 'https://67c0f21cb9d02a9f224b4733.mockapi.io/game/gamers/${id}';
+      fetch(url,{
+        method:"DELETE"
+      })
+      .then(response => response.json())
+      .then(data =>console.log (data));
+       this.fetchGamers();
+       console.log('Hello Zeeshan OK working');
+      // alert(id);
+    }
+    }
 }
