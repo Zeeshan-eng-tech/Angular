@@ -41,5 +41,10 @@ constructor(){
           })
           .catch(error => console.error("Error deleting gamer:", error));
       }
+     }
+  
+     editGamer(){
+      alert('function is working');
+     }
+   
     }
-  }
