@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { response } from 'express';
-
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-gamers',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './gamers.component.html',
   styleUrl: './gamers.component.css'
 })

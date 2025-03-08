@@ -20,7 +20,7 @@ export const routes: Routes = [
         component:GamersComponent
     },
     {
-        path:'edit',
+        path:'edit.id',
         component:EditGamerComponent    
     },
     {

@@ -13,9 +13,9 @@
       <td>{{ gamer.whatsapp }}</td>
       <td>
         <button class="btn btn-sm m-2 btn-danger" (click)="deleteGamer(gamer.id)"><i class="fa fa-trash"></i></button>
-       <!-- <a href="edit"> -->
+       <a routerLink="/edit/{{ gamer.id }}">
         <button class="btn btn-sm btn-success" (click)="editGamer()"><i class="fa fa-edit"></i></button>
-      <!-- </a> -->
+      </a>
       </td>
     </tr>
   </table>
