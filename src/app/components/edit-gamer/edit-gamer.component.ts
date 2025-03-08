@@ -7,19 +7,20 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './edit-gamer.component.css'
 })
 export class EditGamerComponent {
-  studentId: any = null;
+  gamerId: any = null;
+  gamer: any = null;
   constructor( private route:ActivatedRoute){
-   this.fetchUser();
+  //  this.fetchUser();
   }
   ngOnInit(){
     this.gamerId = this.route.snapshot.paramMap.get('id');
-    console.log('Hello Zeeshan')
-  }
-  fetchUser(){
-   let url = 'https://67c0f21cb9d02a9f224b4733.mockapi.io/game/gamers/${this.gamerId}' 
-   fetch(url)
-   .then(response => response.json)
-   .then(data => console.log(data));
-   
+    let url = 'https://67c0f21cb9d02a9f224b4733.mockapi.io/game/gamers/${this.gamerId}' 
+    console.log(url)
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      this.gamer = data,
+      console.log(this.gamer)
+    });
   }
 }
