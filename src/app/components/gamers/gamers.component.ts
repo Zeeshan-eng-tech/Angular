@@ -39,12 +39,7 @@ constructor(){
             console.log("Deleted:", data);  // ✅ Check if deletion was successful
             this.fetchGamers();             // ✅ Fetch updated list AFTER deletion completes
           })
-          .catch(error => console.error("Error deleting gamer:", error));
-      }
+         .catch(error => console.error("Error deleting gamer:", error));
+       }
      }
-  
-     editGamer(){
-      alert('function is working');
-     }
-   
     }

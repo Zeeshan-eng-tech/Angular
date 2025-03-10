@@ -14,7 +14,7 @@ export class EditGamerComponent {
   }
   ngOnInit(){
     this.gamerId = this.route.snapshot.paramMap.get('id');
-    let url = 'https://67c0f21cb9d02a9f224b4733.mockapi.io/game/gamers/${this.gamerId}' 
+    let url = `https://67c0f21cb9d02a9f224b4733.mockapi.io/game/gamers/${this.gamerId}` 
     console.log(url)
     fetch(url)
     .then(response => response.json())
